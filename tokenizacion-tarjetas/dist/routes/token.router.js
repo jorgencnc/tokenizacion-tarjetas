@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.tokenRouter = void 0;
+const express_1 = require("express");
+const validation_middleware_1 = require("../middlewares/validation.middleware");
+const token_controller_1 = require("../controllers/token.controller");
+const tokenRouter = (0, express_1.Router)();
+exports.tokenRouter = tokenRouter;
+tokenRouter.post('/', validation_middleware_1.validateTokenRequest, token_controller_1.createToken);
+tokenRouter.get('/:token', token_controller_1.getTokenData);
