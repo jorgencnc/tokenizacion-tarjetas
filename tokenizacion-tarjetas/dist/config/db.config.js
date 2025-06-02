@@ -10,9 +10,9 @@ const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const sequelize = new sequelize_1.Sequelize({
     dialect: 'mysql', // o 'postgres'
-    host: process.env.DB_HOST || '31.220.97.42',
-    username: process.env.DB_USER || 'app_soft',
-    password: process.env.DB_PASSWORD || 'J0rge123',
+    host: process.env.DB_HOST || '3xxxx',
+    username: process.env.DB_USER || 'xx',
+    password: process.env.DB_PASSWORD || 'xx',
     database: process.env.DB_NAME || 'card_tokenization',
     port: parseInt(process.env.DB_PORT || '3306'),
     logging: false,
